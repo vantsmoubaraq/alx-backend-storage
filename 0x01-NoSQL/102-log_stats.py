@@ -29,6 +29,6 @@ if __name__ == "__main__":
     count = 0
     for key, value in sorted(result.items(), key=lambda x: x[1], reverse=True):
         count += 1
-        print(f"{key}: {value}")
+        print(f"\t{key}: {value}")
         if count == 10:
             break
