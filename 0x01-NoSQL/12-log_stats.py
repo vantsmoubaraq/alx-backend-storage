@@ -7,7 +7,7 @@ if __name__ == "__main__":
     nginx_collection = client.logs.nginx
 
     print(f"{nginx_collection.count_documents({})} logs")
-    print("Methods")
+    print("Methods:")
     for item in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
         print("\tmethod {}: {}".format(item,
               nginx_collection.count_documents({"method": item})))
