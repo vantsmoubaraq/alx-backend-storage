@@ -8,4 +8,5 @@ nginx_collection = client.logs.nginx
 print(f"{nginx_collection.count_documents({})} logs")
 print("Methods")
 for item in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
-    print("\t method {}: {}".format(item, nginx_collection.count_documents({"method" : item})))
+    print("\t method {}: {}".format(item,
+          nginx_collection.count_documents({"method": item})))
