@@ -9,5 +9,5 @@ if __name__ == "__main__":
     print(f"{nginx_collection.count_documents({})} logs")
     print("Methods")
     for item in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
-        print("\t method {}: {}".format(item,
+        print("\tmethod {}: {}".format(item,
               nginx_collection.count_documents({"method": item})))
