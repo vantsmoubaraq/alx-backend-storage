@@ -11,3 +11,5 @@ if __name__ == "__main__":
     for item in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
         print("\tmethod {}: {}".format(item,
               nginx_collection.count_documents({"method": item})))
+    print("{} status check".format(nginx_collection.count_documents(
+          {"method": "GET", "path": "/status"})))
