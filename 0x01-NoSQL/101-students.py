@@ -19,6 +19,5 @@ def top_students(mongo_collection):
 
         new_collection.append(doc)
 
-    print(new_collection)
     return sorted(new_collection, key=lambda x:
                   x["averageScore"], reverse=True)
