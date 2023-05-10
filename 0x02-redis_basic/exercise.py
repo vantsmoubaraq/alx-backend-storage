@@ -30,13 +30,11 @@ class Cache:
             pass
         return value
 
-    @staticmethod
     def get_str(key: str) -> str:
         """converts into a string"""
         data = self._redis.get(key)
         return data.decode("utf-8")
 
-    @staticmethod
     def get_int(key: str) -> int:
         """converts into an integer"""
         data = self._redis.get(key)
